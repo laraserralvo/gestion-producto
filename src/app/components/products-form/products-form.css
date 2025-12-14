@@ -1,0 +1,29 @@
+.product-form-card{
+  background: #7b3535;           
+  border-radius: 14px;
+  width: 300px;                   
+}
+
+.form-title{
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: .5px;
+  font-size: 1rem;
+}
+
+.form-control-custom{
+  background: #f2f2f2;
+  border: 0;
+  border-radius: 4px;
+  padding: .45rem .6rem;
+}
+
+.form-control-custom:focus{
+  box-shadow: 0 0 0 .2rem rgba(255,255,255,.25);
+}
+
+.btn-create{
+  border-radius: 8px;
+  font-weight: 600;
+  color: #444;
+}
