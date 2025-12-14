@@ -1,6 +1,6 @@
 
 <!-- CABECERA -->
-<header class="py-3" style="background-color: #e7c1c1;">
+<header class="py-3" style="background-color: #b58585;">
   <div class="container d-flex align-items-center">
 
     <!-- Logo -->
@@ -21,10 +21,20 @@
 
 <!--CONTENIDO PRINCIPAL-->
 <main class="container py-5 mb-5">
-  <app-products-form
-    (productoCreado)="onProductoCreado($event)">
-  </app-products-form>
-  <app-products-list></app-products-list>    
+  <div class="row g-5 align-items-start">
+
+    <!-- Izquierda: Formulario -->
+    <div class="col-12 col-lg-3">
+      <app-products-form
+        (productoCreado)="onProductoCreado($event)">
+      </app-products-form>
+    </div>
+
+    <!-- Derecha: Listado con Grid -->
+    <div class="col-12 col-lg-9">
+      <app-products-list></app-products-list>
+    </div>
+  </div>
 </main>
 
 
