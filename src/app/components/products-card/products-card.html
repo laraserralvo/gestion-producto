@@ -1,25 +1,47 @@
-<div class="card h-100 shadow-sm border-0 product-card">
+<div class="card h-100 border-0 shadow-sm product-card">
 
-  <img
+  <!-- Imagen -->
+  <img 
     [src]="product.image"
     class="card-img-top product-img"
-    [alt]="product.name"
+    alt="{{ product.name }}"
   >
 
   <div class="card-body d-flex flex-column">
-    <h6 class="fw-semibold mb-2">{{ product.name }}</h6>
 
-    <p class="text-muted small mb-3 clamp-2">
+    <!-- Nombre -->
+    <h6 class="product-title mb-1">
+      {{ product.name }}
+    </h6>
+
+    <!-- Descripcion -->
+    <p class="product-desc mb-2">
       {{ product.description }}
     </p>
 
+    <!-- Precio -->
+    <p class="product-price mb-2">
+      {{ product.price }} €
+    </p>
+
+    <!-- Categoria y estado -->
+    <div class="mb-3 d-flex justify-content-between align-items-center">
+      <span class="product-category">Hombre</span>
+
+      <span
+        class="product-status"
+        [class.active]="product.active"
+        [class.inactive]="!product.active">
+        {{ product.active ? 'ACTIVO' : 'INACTIVO' }}
+      </span>
+    </div>
+
+    <!-- Botoon eliminar-->
     <button
-      type="button"
-      class="btn btn-outline-danger btn-sm w-100 mt-auto"
-      (click)="eliminar()"
-    >
+      class="btn btn-wine w-100 mt-auto"
+      (click)="eliminar()">
       Eliminar producto
     </button>
-  </div>
 
+  </div>
 </div>
